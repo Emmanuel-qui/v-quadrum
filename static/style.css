@@ -87,3 +87,30 @@ body {
 h1 {
     color: aqua;
 }
+
+
+/* Codigo css para tabla */
+.container-validate {
+    display: grid;
+    max-width: 900px;    
+}
+.dividir {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#id_table {
+    display: none;
+}
+th {
+    text-align: center;
+}
+tr {
+    padding: 1rem;
+}

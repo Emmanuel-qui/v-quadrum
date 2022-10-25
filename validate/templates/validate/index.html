@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}" />
 	<title> Validador </title>
 </head>
-<body>
-	<h1> Hola desde la app validate </h1>
+
+<body class="center">
+
+	<div id="contenedor" class="container-validate">
+		<div>
+			<form id="form_file" method="" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div>
+					<input type="file" name="file" id="file">
+				</div>
+				<br>
+				<input type="button" value="Enviar" id="form_button">
+			</form>
+		</div>
+		<div id="id_response">
+			<table id="id_table">
+				<tbody>
+					<th>
+						Resultado
+					</th>
+					<tr>
+						<td>Estructura</td>
+						<td id="td_estruc"></td>
+					</tr>
+					<tr>
+						<td>Sello</td>
+						<td id="td_sello"></td>
+					</tr>
+					<tr>
+						<td>Sello Sat</td>
+						<td id="td_sesat"></td>
+					</tr>
+					<tr>
+						<td>Error</td>
+						<td id="td_error"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
 
 
-	<h2> Formulario, ingrese el documento </h2>
-
-	<form action="{% url 'validate:index' %}" method="post" enctype="multipart/form-data">
-		{% csrf_token %}		
-        {{form.as_p}}
-
-        <input type="submit" value="Enviar">
-	</form>		
+	<script src="{% static 'app.js' %}"></script>
 
 </body>
+
 </html>
