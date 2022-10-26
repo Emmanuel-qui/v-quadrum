@@ -84,9 +84,7 @@ body {
     margin: 0 auto;
 }
 
-h1 {
-    color: aqua;
-}
+
 
 
 /* Codigo css para tabla */
@@ -113,4 +111,10 @@ th {
 }
 tr {
     padding: 1rem;
+}
+
+
+/* Contenido formulario */
+.contenido-formulario {
+    margin-top: 1rem;
 }

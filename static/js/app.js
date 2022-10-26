@@ -1,3 +1,5 @@
+console.log('cargando')
+
 // Funcion para obtener el token
 function getCookie(name) {
     let cookieValue = null;
@@ -20,11 +22,11 @@ const enviar = document.getElementById("form_button");
 
 
 function send() {
-     const div = document.getElementById("contenedor");
-     div.classList.add("dividir");
+    //  const div = document.getElementById("contenedor");
+    //  div.classList.add("dividir");
      
-     const table = document.getElementById("id_table");
-     table.style.display = "block";
+    //  const table = document.getElementById("id_table");
+    //  table.style.display = "block";
     
      const td_estruc = document.getElementById("td_estruc");
      const td_sello = document.getElementById("td_sello");
